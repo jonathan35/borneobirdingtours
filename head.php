@@ -25,7 +25,7 @@ if (strpos($_SERVER['SCRIPT_NAME'], 'page.php') !== false && !empty($_GET['t']))
 
 <!DOCTYPE html>
 <head>
-    <title>Borneo Birding Tour Sdn Bhd <?php echo $seo_title?></title>
+    <title>Borneo Birding Tours Sdn Bhd <?php echo $seo_title?></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -73,6 +73,16 @@ if (strpos($_SERVER['SCRIPT_NAME'], 'page.php') !== false && !empty($_GET['t']))
             'sitekey' : '6LdPR5gUAAAAAObMmAHwsTGWbMNB4veEV1u4lTJU'
         });
     };
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-207951726-1">
+    </script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-207951726-1');
     </script>
 
 
