@@ -25,7 +25,10 @@
   <?php $home_content = sql_read('select * from content where id = 2 limit 1');?>
   <div class="nav lnav" link="../content/content?id=Mg==&no_list=true"><?php echo $home_content['title']?></div>
   <div class="nav lnav" link="../content/pages">Pages (Free-formated)</div>
-
+  <div class="nav lnav" link="../tour/analytic_report">
+    Analytic Report
+    <span style="font-size:80%; color:red;">new</span>
+  </div>
 
   <h4>Report & Gallery</h4>
   <div class="nav lnav" link="../content/report">Report</div>

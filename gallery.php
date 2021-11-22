@@ -69,7 +69,24 @@ include_once 'head.php';
                         if(count((array)$galleries)<1){
                             echo '<div class="col-3 pb-5">no photo found..</div>';
                         }else{
-                            foreach((array)$galleries as $gallery){?>
+                            foreach((array)$galleries as $gallery){
+                                
+                                        
+                                                                
+                                //---------------- Update product_analytic > display ---------------------
+                                $exist = sql_read("select id, display from product_analytic where product=? limit 1", 'i', $gallery['id']);
+
+                                if(!empty($exist['id'])){
+                                    $analytic['id'] = $exist['id'];
+                                    $analytic['display'] = $exist['display'] + 1;
+                                }else{
+                                    $analytic['product'] = $gallery['id'];
+                                    $analytic['display'] = 1;
+                                }
+                                
+                                sql_save("product_analytic", $analytic);
+                                
+                                ?>
                                 <div class="col-12 col-md-4 pb-5 page page<?php echo $itemCount?> frame" style="<?php if($itemCount>$maxPerPage){?> display:none;<?php }?>; ">
                                     
 
